@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Sift</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Basic Reset & Box Sizing */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(45deg, #a78dd3, #70c1b3, #fce38a, #ff785a);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            color: #fff; /* Changed text color to white for better contrast on dark background */
+            display: flex;
+            flex-direction: column; /* To place navbar above the form */
+            align-items: center;
+            min-height: 100vh;
+            margin: 0; /* Remove default body margin */
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navdiv {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 32px;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #5cd6d6;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        li {
+            margin-left: 20px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: #f0f0f0;
+            padding: 10px 16px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        li a:hover {
+            background-color: #5cd6d6;
+            color: #fff;
+        }
+
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1em; /* Adjusted font size for better readability */
+            width: 90%;
+            max-width: 400px; /* More reasonable max-width */
+            padding: 30px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+            margin-top: 40px; /* Space between navbar and form */
+            color: #fff; /* Ensure text inside the form is readable */
+        }
+
+        .form-container h1 {
+            margin-top: 0; /* Remove extra top margin */
+            padding-bottom: 20px;
+            color: #5cd6d6; /* Consistent accent color */
+            font-size: 2em;
+        }
+
+        .form-inputs {
+            margin: 1em 0; /* Adjusted margin */
+        }
+
+        input {
+            height: auto; /* Adjust height automatically */
+            width: 100%; /* Make input fields fill the container */
+            padding: 15px; /* Increased padding for better touch targets */
+            border-radius: 5px;
+            font-size: 1em;
+            border: none;
+            outline: none;
+            font-weight: normal; /* Adjusted font weight */
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            margin-bottom: 15px; /* Add margin below input fields */
+        }
+
+        input::placeholder {
+            font-weight: normal;
+            color: #777;
+        }
+
+        button {
+            padding: 12px 25px;
+            height: auto; /* Adjust height automatically */
+            width: 100%; /* Make button fill the container */
+            border-radius: 5px;
+            font-family: sans-serif;
+            font-size: 1.1em;
+            background-color: #5cd6d6;
+            color: #fff;
+            box-shadow: 2px 8px 4px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #4ca8a8;
+        }
+
+        body {
+            text-align: center;
+            position: center;
+            background: black;
+        }
+
+        hr {
+            border-top: 1px solid #555;
+            margin-top: 20px;
+        }
+
+        /* Responsive adjustments for the navbar */
+        @media (max-width: 768px) {
+            .navdiv {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            ul {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            li {
+                margin: 10px 0;
+                margin-left: 0; /* Reset left margin for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="muk.html"><span>Sift</span></a></div>
+            <ul>
+                <li><a href="muk.html">HOME</a></li>
+                <li><a href="#">CONTACTS</a></li>
+                <li><a href="about us.html">ABOUT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <h1>Login</h1>
+        <p id="demo"></p>
+        <div class="form-inputs">
+            <input type="text" placeholder="Enter Username" required="required" id="user">
+        </div>
+        <div>
+            <input type="password" placeholder="Enter Password" required="required" id="pass">
+        </div>
+        <div>
+            <button onclick="foll()">Login</button>
+        </div>
+    </div>
+    <hr>
+
+    <script>
+        function foll(location) {
+            const pass = document.getElementById("pass").value;
+            const user = document.getElementById("user").value;
+            if (pass === "a" && user === "mukhtar") {
+                window.location.href = "muk.html";
+            } else {
+                alert("Login Failed!");
+            }
+        }
+    </script>
+</body>
+</html>

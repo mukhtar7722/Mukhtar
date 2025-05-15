@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sift Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- Reset & Box Sizing --- */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* --- Navigation --- */
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navdiv {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 32px;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #5cd6d6;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #f0f0f0;
+            padding: 10px 16px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            background-color: #5cd6d6;
+            color: #fff;
+        }
+
+        /* --- Container for Content --- */
+        .container {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #5cd6d6; /* Use your brand color */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .section h2 {
+            text-align: left;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .team-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .team-member {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            width: calc(33% - 20px); /* Adjust for different screen sizes */
+            box-sizing: border-box;
+        }
+
+        .team-member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .team-member h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .team-member p {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navdiv {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .team-member {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .team-member {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="index.html"><span>Sift</span> Academy</a></div>
+            <ul class="nav-links">
+                <li><a href="muk.html">HOME</a></li>
+                <li><a href="about us.html">ABOUT US</a></li>
+                <li><a href="muk.html">CONTACT: +250 791747777</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>About Sift Academy</h1>
+
+        <section class="section">
+            <h2>Our Story</h2>
+            <p>Sift Academy was founded with a passion for empowering individuals through quality education and skill development. We believe in creating a supportive and engaging learning environment where students can thrive and achieve their full potential. Our journey began [Insert year of founding] with a small group of dedicated educators who shared a vision for a brighter future through learning.</p>
+            <p>Over the years, we have grown and evolved, adapting to the changing needs of the educational landscape. However, our core values of excellence, innovation, and student success remain at the heart of everything we do.</p>
+        </section>
+
+        <section class="section">
+            <h2>Our Mission</h2>
+            <p>Our mission is to provide accessible and high-quality education that equips learners with the knowledge, skills, and confidence to succeed in their chosen paths. We are committed to fostering a culture of lifelong learning and continuous improvement.</p>
+            <ul>
+                <li>We strive for excellence in all our programs and services.</li>
+                <li>We embrace innovation to enhance the learning experience.</li>
+                <li>We prioritize the success and well-being of our students.</li>
+                <li>We foster a collaborative and inclusive community.</li>
+            </ul>
+        </section>
+
+        <section class="section team-section">
+            <h2>Our Team</h2>
+            <div class="team-member">
+                
+                <h3>MUKHTAR</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+               
+                <h3>DELPHIN</h3>
+                <p>Head of Academics</p>
+            </div>
+            
+            </section>
+
+        <section class="section">
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Excellence:</strong> We are committed to the highest standards in education and service.</li>
+                <li><strong>Innovation:</strong> We continuously seek new and better ways to learn and grow.</li>
+                <li><strong>Integrity:</strong> We operate with honesty, transparency, and ethical principles.</li>
+                <li><strong>Community:</strong> We believe in the power of collaboration and support.</li>
+                <li><strong>Student-Centered:</strong> The needs and success of our students are our top priority.</li>
+            </ul>
+        </section>
+    </div>
+</body>
